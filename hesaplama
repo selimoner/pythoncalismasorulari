@@ -1,0 +1,29 @@
+import random
+import math
+
+a=[]
+
+for i in range(0,10): # 10 elemanlı random bir dizi oluşturuyoruz 
+    a.append(random.randint(1,20))
+    
+print(a)  # diziyi kontrol etmek için yazdırıyoruz
+
+total=0   # hesaplamalarımızı tanımlıyoruz
+product=1
+baseproduct=0
+harmonic=0
+
+for i in range(0,len(a)):  # hesaplamalarımızı yapıyoruz
+    total+=a[i]
+    product*=a[i]
+    harmonic+=1/a[i]
+    baseproduct+=math.pow(a[i],2)
+arithmetic=total/len(a)
+
+geometric=math.pow(product,(1/len(a)))  # son işlemler
+harmonictotal=len(a)/harmonic
+contra=baseproduct/total
+
+# sonuçlarımızı yazdırıyoruz
+
+print(f"Arithmetic : {arithmetic} Geometric : {geometric} Harmonic : {harmonictotal} Contraharmonic : {contra}")
