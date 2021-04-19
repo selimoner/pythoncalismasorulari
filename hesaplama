@@ -18,8 +18,8 @@ for i in range(0,len(a)):  # hesaplamalarımızı yapıyoruz
     product*=a[i]
     harmonic+=1/a[i]
     baseproduct+=math.pow(a[i],2)
-arithmetic=total/len(a)
 
+arithmetic=total/len(a)
 geometric=math.pow(product,(1/len(a)))  # son işlemler
 harmonictotal=len(a)/harmonic
 contra=baseproduct/total
